@@ -4,7 +4,7 @@ import { fetchPost, postSelector } from "../slices/post";
 import { Post } from "../components/Post";
 import { useParams } from "react-router-dom";
 
-const SinglePostPage = ({match}) => {
+const SinglePostPage = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const { post, loading: postLoading, hasErrors: postHasErrors } = useSelector(postSelector);
