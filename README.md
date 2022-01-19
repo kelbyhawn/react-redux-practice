@@ -1,5 +1,5 @@
 # react-redux-practice
-Learning React Redux.
+Learning React Redux with a tutorial from [Tania Rascia](https://github.com/taniarascia).
 
 ## Dependencies
 - [React](https://reactjs.org/)
@@ -7,4 +7,4 @@ Learning React Redux.
 - [Redux](https://redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [React Redux](https://react-redux.js.org/)
-- [Sass](https://sass-lang.com/)
+- [Redux Tutorial by Tania Rascia](https://www.taniarascia.com/redux-react-guide/)
