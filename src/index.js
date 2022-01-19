@@ -1,5 +1,5 @@
 // External imports
-import React from "react";
+import React, { StrictMode } from "react";
 import { render } from "react-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
@@ -14,8 +14,10 @@ import "./index.css";
 const store = configureStore({ reducer: rootReducer })
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>,
   document.querySelector("#root")
 )
