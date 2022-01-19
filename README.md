@@ -7,5 +7,3 @@ Learning React Redux with a [tutorial](https://www.taniarascia.com/redux-react-g
 - [Redux](https://redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [React Redux](https://react-redux.js.org/)
-- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
-- [Redux DevTools Extension](https://github.com/reduxjs/redux-devtools-extension)
