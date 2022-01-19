@@ -41,7 +41,7 @@ export function fetchPost(id) {
       const data = await response.json();
 
       dispatch(getPostSuccess(data));
-    } catch {
+    } catch (error) {
       dispatch(getPostFailure());
     }
   }
