@@ -6,7 +6,7 @@ export const initialState = {
   hasErrors: false,
 }
 
-const postSlice = createSlice({
+const postsSlice = createSlice({
   name: "posts",
   initialState,
   reducers: {
@@ -26,11 +26,11 @@ const postSlice = createSlice({
 });
 
 // Three actions generated from the slice
-export const { getPosts, getPostsSuccess, getPostsFailure } = postSlice.actions;
+export const { getPosts, getPostsSuccess, getPostsFailure } = postsSlice.actions;
 // Selector
 export const postsSelector = state => state.posts
 // Reducer
-export default postSlice.reducer
+export default postsSlice.reducer
 
 // Async Thunk action
 export function fetchPosts() {
