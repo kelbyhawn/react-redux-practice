@@ -10,8 +10,9 @@ const App = () => {
     <Router>
       <Routes>
         <Route exact path="/" element={<DashboardPage />} />
-        <Route exact path="posts" element={<PostsPage />} />
+        <Route exact path="posts" element={<PostsPage />}>
           <Route exact path=":id" element={<SinglePostPage />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>  
