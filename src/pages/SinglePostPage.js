@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+
 import { fetchPost, postSelector } from "../slices/post";
 import { fetchComments, commentsSelector } from "../slices/comments";
+
 import { Post } from "../components/Post";
 import { Comment } from "../components/Comment";
-import { useParams } from "react-router-dom";
 
 const SinglePostPage = () => {
   const dispatch = useDispatch();
