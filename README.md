@@ -1,7 +1,7 @@
 # react-redux-practice
 Learning React Redux with a [tutorial](https://www.taniarascia.com/redux-react-guide/) from [Tania Rascia](https://github.com/taniarascia).
 
-_Note:_ Upgraded code to work w/ React Router v6
+[View on CodeSandbox](https://codesandbox.io/s/redux-toolkit-tutorial-ppwis)
 
 ## Dependencies
 - [Create React App](https://create-react-app.dev)
