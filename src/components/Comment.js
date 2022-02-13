@@ -1,4 +1,4 @@
-export function Comment({ comment }) {
+export default function Comment({ comment }) {
   return (
     <aside className="comment">
       <h2>{comment.title}</h2>

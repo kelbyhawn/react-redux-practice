@@ -5,32 +5,39 @@ import { useParams } from "react-router-dom";
 import { fetchPost, postSelector } from "../slices/post";
 import { fetchComments, commentsSelector } from "../slices/comments";
 
-import { Post } from "../components/Post";
-import { Comment } from "../components/Comment";
+import Post from "../components/Post";
+import Comment from "../components/Comment";
 
-const SinglePostPage = () => {
+export default function SinglePostPage() {
   const dispatch = useDispatch();
+  // uses React Router v6
   const { id } = useParams();
-  const { post, loading: postLoading, hasErrors: postHasErrors } = useSelector(postSelector);
-  const { comments, loading: commentsLoading, hasErrors: commentsHasErrors} = useSelector(commentsSelector);
+  const { post, loading: postLoading, hasErrors: postHasErrors } = useSelector(
+    postSelector
+  );
+  const {
+    comments,
+    loading: commentsLoading,
+    hasErrors: commentsHasErrors
+  } = useSelector(commentsSelector);
 
   useEffect(() => {
     dispatch(fetchPost(id));
     dispatch(fetchComments(id));
-  }, [dispatch, id])
+  }, [dispatch, id]);
 
   function renderPost() {
-    if (postLoading) return <p>Loading post...</p>
-    if (postHasErrors) return <p>Unable to display post.</p>
+    if (postLoading) return <p>Loading post...</p>;
+    if (postHasErrors) return <p>Unable to display post.</p>;
 
-    return <Post post={post} />
+    return <Post post={post} />;
   }
 
   function renderComments() {
-    if (commentsLoading) return <p>Loading comments...</p>
-    if (commentsHasErrors) return <p>Unable to display comments.</p>
-    
-    return comments.map(comment => (
+    if (commentsLoading) return <p>Loading comments...</p>;
+    if (commentsHasErrors) return <p>Unable to display comments.</p>;
+
+    return comments.map((comment) => (
       <Comment key={comment.id} comment={comment} />
     ));
   }
@@ -41,7 +48,5 @@ const SinglePostPage = () => {
       <h2>Comments</h2>
       {renderComments()}
     </section>
-  )
+  );
 }
-
-export default SinglePostPage

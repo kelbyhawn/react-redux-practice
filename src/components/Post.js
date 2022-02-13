@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Post = ({ post, excerpt }) => {
+export default function Post({ post, excerpt }) {
   console.log(post);
   return (
     <article className={excerpt ? "post-excerpt" : "post"}>
@@ -14,5 +14,5 @@ export const Post = ({ post, excerpt }) => {
         </Link>
       )}
     </article>
-  )
+  );
 }

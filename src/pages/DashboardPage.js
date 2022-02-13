@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const DashboardPage = () => {
+export default function DashboardPage() {
   return (
     <section>
       <h1>Dashboard</h1>
@@ -13,5 +13,3 @@ const DashboardPage = () => {
     </section>
   );
 }
-
-export default DashboardPage

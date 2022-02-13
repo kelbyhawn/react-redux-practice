@@ -1,3 +1,6 @@
+// adapted from Tania Rascia's React Redux Toolkit Application Sandbox
+// https://codesandbox.io/s/react-redux-toolkit-application-cbb6s
+
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
